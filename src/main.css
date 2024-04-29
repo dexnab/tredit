@@ -1,0 +1,28 @@
+:root {
+	font-size: 1vw;
+	font-family: monospace;
+	font-style: normal;
+	font-weight: normal;
+	color: white;
+	background-color: black;
+}
+body {
+	margin: 0px;
+}
+.test-box {
+	width: max-content;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	padding-bottom: 0.1em;
+	padding-top: 0.1em;
+}
+.test-box:hover {
+	width: max-content;
+	padding-left: calc(0.2em - var(--var-dot));
+	padding-right: calc(0.2em - var(--var-dot));
+	padding-bottom: calc(0.1em - var(--var-dot));
+	padding-top: calc(0.1em - var(--var-dot));
+	border-style: solid;
+	border-width: var(--var-dot);
+	border-color: white;
+}
