@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,18 +8,39 @@
 	</head>
 	<body>
 		<h1>tredit</h1>
-		<div lang="en" class="test-box" id="test-0">
-			name 0
-		</div>
-		<div lang="en" class="test-box">
-			name 1
-		</div>
-		<div lang="en" class="test-box">
-			name 2
-		</div>
-		<div lang="en" class="test-box">
-			name 3
-		</div>
+		<ol class="test-tree">
+			<li>
+				<details>
+					<summary>name 0</summary>
+					<ol class="test-tree">
+						<li>
+							name 0.0
+						</li>
+						<li>
+							name 0.1
+						</li>
+					</ol>
+				</details>
+			</li>
+			<li>
+				<details>
+					<summary>name 1</summary>
+					<ol class="test-tree">
+						<li>
+							name 1.0
+						</li>
+						<li>
+							name 1.1
+						</li>
+						<li>
+							name 1.2
+						</li>
+					</ol>
+				</details>
+			</li>
+			<li>name 2
+			</li>
+		</ol>
 		<script src="main.js"></script>
 	</body>
 </html>

@@ -26,3 +26,11 @@ body {
 	border-width: var(--var-dot);
 	border-color: white;
 }
+.test-tree {
+	list-style-type: none;
+	padding: 0;
+}
+.test-tree ol {
+	list-style-type: none;
+	padding-left: 1vw;
+}
