@@ -26,11 +26,14 @@ body {
 	border-width: var(--var-dot);
 	border-color: white;
 }
-.test-tree {
-	list-style-type: none;
-	padding: 0;
-}
-.test-tree ol {
+#test-tree ol, #test-tree-auto ol {
 	list-style-type: none;
 	padding-left: 1vw;
+	margin: 0;
+}
+#test-tree .content, #test-tree-auto .content {
+	display: flex;
+}
+#test-tree .caret, #test-tree-auto .caret {
+	padding-right: 0.2vw;
 }

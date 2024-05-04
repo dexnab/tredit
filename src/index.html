@@ -8,52 +8,76 @@
 	</head>
 	<body>
 		<h1>tredit</h1>
-		<ol class="test-tree">
-			<li>
-				<div class="caret"></div>
-				<div class="name">name 0</div>
+		<div id="test-tree">
+			<div class="content">
+				<div class="caret">></div>
+				<div class="name">root name</div>
 				<div class="detail"></div>
-				<ol>
-					<li>
-						<div class="caret"></div>
-						<div class="name">name 0.0</div>
+			</div>
+			<ol>
+				<li>
+					<div class="content">
+						<div class="caret">></div>
+						<div class="name">name 0</div>
 						<div class="detail"></div>
-					</li>
-					<li>
-						<div class="caret"></div>
-						<div class="name">name 0.1</div>
+					</div>
+					<ol>
+						<li>
+							<div class="content">
+								<div class="caret">></div>
+								<div class="name">name 0.0</div>
+								<div class="detail"></div>
+							</div>
+						</li>
+						<li>
+							<div class="content">
+								<div class="caret">></div>
+								<div class="name">name 0.1</div>
+								<div class="detail"></div>
+							</div>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<div class="content">
+						<div class="caret">></div>
+						<div class="name">name 1</div>
 						<div class="detail"></div>
-					</li>
-				</ol>
-			</li>
-			<li>
-				<div class="caret"></div>
-				<div class="name">name 1</div>
-				<div class="detail"></div>
-				<ol>
-					<li>
-						<div class="caret"></div>
-						<div class="name">name 1.0</div>
+					</div>
+					<ol>
+						<li>
+							<div class="content">
+								<div class="caret">></div>
+								<div class="name">name 1.0</div>
+								<div class="detail"></div>
+							</div>
+						</li>
+						<li>
+							<div class="content">
+								<div class="caret">></div>
+								<div class="name">name 1.1</div>
+								<div class="detail"></div>
+							</div>
+						</li>
+						<li>
+							<div class="content">
+								<div class="caret">></div>
+								<div class="name">name 1.2</div>
+								<div class="detail"></div>
+							</div>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<div class="content">
+						<div class="caret">></div>
+						<div class="name">name 2</div>
 						<div class="detail"></div>
-					</li>
-					<li>
-						<div class="caret"></div>
-						<div class="name">name 1.1</div>
-						<div class="detail"></div>
-					</li>
-					<li>
-						<div class="caret"></div>
-						<div class="name">name 1.2</div>
-						<div class="detail"></div>
-					</li>
-				</ol>
-			</li>
-			<li>
-				<div class="caret"></div>
-				<div class="name">name 2</div>
-				<div class="detail"></div>
-			</li>
-		</ol>
+					</div>
+				</li>
+			</ol>
+		</div>
+		<div id="test-tree-auto"></div>
 		<script src="main.js"></script>
 	</body>
 </html>
