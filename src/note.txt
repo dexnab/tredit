@@ -1,0 +1,77 @@
+object type
+- simple object
+-- a single, indivisible object
+-- although it may have multiple parts visually, it is treated as a single object
+-- single means all its parts share same properties
+-- parameter is a property that can be specified externally
+-- shape encoding
+--- raster image
+--- piecewise liear
+--- simple curves
+---- e.g. biezer curvers
+---- easier to render
+--- parametric curves
+---- can represent arbitrary curves
+---- ideal for complex curves that require precision
+--- implicit function/color field
+---- just a continuous version of raster image/color map
+---- ideal for color filling
+- reference object
+-- a reference/pointer to an existing object
+-- it can point to another reference object
+-- it can specify parameters for the target object
+-- analogy: function
+--- reference(pr) = original(p0 = pr, p1 = constant)
+- composite object
+-- an collection of other objects
+-- the order may affect superimposition
+
+render
+- simple object
+-- generate rasterized result
+--- graphic
+---- has highest resolution, usually screen resolution, or higher if supersampling is enabled
+---- raster image format, e.g. rgba, cmyk, gray scale, etc.
+---- mainly used for display and to derive the following lower quality results
+--- boundary
+---- has lower resoltion to reduce complexity
+---- bitmap format, i.e. 0 and 1
+---- mainly used for event triggering and collision detection
+--- box
+---- minimum bounding box, usually in rectangular shape
+---- mainly used for positioning and event triggering
+- reference object
+-- render the target object with specified parameters
+-- the rendering result can be reused if the reference object does not pass any parameters
+-- example usage: text
+--- each glyph is defined by a simple object
+--- paragraph is represented by a composite object
+--- each character in the paragraph is defined by a reference object
+--- each reference object points to the corresponding glyph object
+--- thus, the rendered result of character objects can be reused, improving efficiency
+--- this is analogous to texture atlas
+- composite object
+-- evaluate parameters for elements inside the object
+--- for example: size, position, color, line width, etc.
+-- render the elements (recursive procedure)
+-- optimize
+--- combine/superimpose the rendering results into a single one if possible
+
+display
+- display the rendered result on the screen/output device
+-- rendering procedure just save the result in memory
+-- the result is not shown on the screen until it is "displayed"
+- resource object
+-- it is normal to have many object that are not displayed directly
+-- these objects are referenced by displayed reference objects
+-- although not displayed, they are still rendered
+-- their rendering result can be resued to improve efficiency
+
+optimize
+- reuse
+-- use reference objects to generate atlas
+- reduce resolution
+- reduce refreshing range
+-- only re-render and display changed parts
+-- try to make object independent, i.e. change in one does not cause change in others
+- only render visible portion

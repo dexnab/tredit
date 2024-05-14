@@ -49,6 +49,14 @@ let show = (p_show) => {
 		let caret = document.createElement("span");
 		caret.className = "caret";
 		caret.textContent = ">";
+		caret.addEventListener("click", (ev) => {
+			let t = ev.target.parentElement.parentElement.children[1];
+			if (t.hasAttribute("hidden")) {
+				t.removeAttribute("hidden");
+			} else {
+				t.setAttribute("hidden", "");
+			}
+		}, false);
 		let name = document.createElement("span");
 		name.className = "name";
 		name.textContent = p_cont.name;
